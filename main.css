@@ -1,0 +1,100 @@
+html,body,.container{
+  height: 100%;
+  font-size: 1rem;
+  background-color: lightgoldenrodyellow;
+  margin: 0;
+  padding: 1rem;
+}
+
+.container{
+  place-items: center;
+  display: grid;
+  grid-template-rows: 4rem auto;
+}
+.grid{
+  padding: 1rem;
+  place-items: center;
+  display: grid;
+  grid-auto-rows: 1fr;
+  aspect-ratio: 1 / 1;
+  height: 500px;
+}
+
+.row{
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(9,1fr);
+}
+.row{
+  border-top: 1px solid black;
+}
+
+.cell{
+  border-left: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  background-color: white;
+}
+.cell:last-of-type{
+  border-right: 1px solid black;
+}
+.cell:nth-of-type(3n){
+  border-right: 1px solid black;
+}
+.row:nth-of-type(3n){
+  border-bottom: 1px solid black;
+}
+.row:last-of-type{
+  border-bottom: 1px solid black;
+}
+
+
+.num{
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  place-items: center;
+}
+.num.illegal{
+  background-color: darkred;
+  color: white;
+}
+
+.cell.active{
+  background-color: green;
+  color: white;
+}
+.number{
+  grid-column: 1/4;
+  grid-row: 1/4;
+  font-size: 2rem;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.controls{
+  display: flex;
+  align-items: center;
+}
+button{
+  background-color: peachpuff;
+  color: hotpink;
+  font-size: 2rem;
+  margin: 1rem;
+  border: 0;
+  outline: none;
+  padding: 0.5rem 1.75rem;
+}
+button:hover{
+  background-color: hotpink;
+  color: peachpuff
+}
+input{
+  margin: 1rem;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border: 0;
+  outline: 0;
+}
